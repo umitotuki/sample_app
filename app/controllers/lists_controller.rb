@@ -8,7 +8,7 @@ class ListsController < ApplicationController
    list.save
    redirect_to list_path(list.id)
   end
-  
+
   def index
     @lists = List.all
   end
@@ -19,7 +19,7 @@ class ListsController < ApplicationController
 
   def edit
   end
-  
+
   private
   def list_params
     params.require(:list).permit(:title, :body)
